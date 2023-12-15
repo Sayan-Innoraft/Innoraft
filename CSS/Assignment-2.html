@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .horizontal-grid {
+        display: grid;
+        grid-template-rows: 150px 500px 150px;
+        grid-row-gap: 10px;
+    }
+
+    .first-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+
+    .internal-horizontal-grid {
+        display: grid;
+        grid-template-rows: 5fr 1fr;
+        grid-row-gap: 20px;
+    }
+
+    .second-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-column-gap: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .box {
+        height: 100%;
+        border-radius: 10px;
+        border: 3px solid whitesmoke;
+        text-align: center;
+        color: ghostwhite;
+        font-size: medium;
+        font-weight: bold;
+        padding-top: 10px;
+
+    }
+
+    body {
+        background-color: burlywood;
+    }
+</style>
+
+<body>
+    <div class="horizontal-grid">
+        <div class="first-grid">
+            <div class="box" style="background-color: rgb(0,149,255)">Header</div>
+        </div>
+        <div class="second-grid">
+            <div class="box" style="background-color: rgb(130,157,14)">Sidebar</div>
+            <div class="internal-horizontal-grid">
+                <div class="box" style="background-color: rgb(211,166,0)">Main Content</div>
+                <div class="box" style="background-color: rgb(96,83,92)">Extra Content</div>
+            </div>
+        </div>
+        <div class="first-grid">
+            <div class="box" style="background-color: rgb(215,127,42)">Footer</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
