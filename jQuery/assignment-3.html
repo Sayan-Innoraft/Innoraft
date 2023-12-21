@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Assignment 3</title>
+</head>
+
+<body>
+    <form id="myForm">
+        <label for="first">First Name</label>
+        <br>
+        <input id='first' type="text">
+        <br>
+        <label for="second">Last Name</label>
+        <br>
+        <input id='second' type="text">
+        <br>
+        <button id="but" type="submit" style="height: 20px; width: 100px; margin-top: 5px;">Submit</button>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#myForm').on('submit', function (event) {
+                event.preventDefault();
+                if ($('#first').val() === '' || $('#second').val() === '') {
+                    alert('Please fill all the fields');
+                } else {
+                    this.submit();
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
