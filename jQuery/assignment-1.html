@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Assignment 1</title>
+    <style>
+        .box {
+            height: 80px;
+            width: 80px;
+            background-color: red;
+        }
+
+        .button {
+            margin-top: 10px;
+            height: 20px;
+            width: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div>Tap the box to hide it</div>
+    <button class="button">Click</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.button').click(function () {
+                $('.box').hide();
+            });
+        });
+
+    </script>
+</body>
+
+</html>
