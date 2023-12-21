@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Assignment 2</title>
+    <style>
+        .container {
+            display: flex;
+            color: white;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 5px;
+            background-color: rgb(0, 128, 43);
+            height: 40px;
+            width: 400px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" style="cursor: pointer;" id='clicker'>Click me to slide down panel</div>
+    <div class="container" style="height: 150px; background-color: rgb(0, 162, 255);">
+        <div id='hello'>Hello World</div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#hello').hide()
+            $('#clicker').on('click',
+                function () {
+                    $('#hello').slideDown('slow')
+                }
+
+            )});
+    </script>
+</body>
+
+</html>
