@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .main {
+            display: grid;
+            grid-template-rows: 1.5fr 4fr 7fr 1.5fr;
+            height: 850px;
+        }
+
+        .header {
+            background-color: lightgrey;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 0;
+
+        }
+
+        .body1 {
+            background-color: rgb(49, 178, 178);
+            margin-top: 0;
+            display: grid;
+            grid-template-columns: 1fr 3.5fr 1fr;
+
+        }
+
+        .body2 {
+            margin: 5px;
+            margin-left: 90px;
+            margin-right: 90px;
+            display: grid;
+            grid-template-columns: 3fr 5fr;
+            position: relative;
+        }
+
+        .floating-div {
+            position: absolute;
+            height: 300px;
+            width: 250px;
+            transform: translate(-20%, 10%);
+            background-color: rgb(221, 150, 217);
+        }
+
+        .footer {
+            background-color: rgb(0, 170, 255);
+            margin: 5px;
+            padding-top: 12px;
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            padding-left: 110px;
+            padding-right: 50px;
+            justify-content: center;
+        }
+
+        .option {
+            margin: 25px;
+            margin-bottom: 33px;
+            color: rgb(50, 50, 251);
+            padding: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+
+            justify-self: center;
+        }
+
+        .selected {
+            background-color: black;
+            color: white;
+        }
+
+        .body1element {
+            justify-self: center;
+            padding-top: 90px;
+            font-size: 70px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+        }
+
+        .arrow {
+            width: 25%;
+            padding-left: 130px;
+        }
+
+        ul {
+            padding-left: 650px;
+            display: flex;
+            position: absolute;
+            justify-content: center;
+        }
+
+        li {
+            margin: 5px;
+            display: inline-block;
+            list-style-type: none;
+            color: white;
+        }
+
+        input,
+        select {
+            background-color: lightgray;
+            opacity: 0.3;
+            border-radius: 5px;
+            border: 2px solid white;
+            height: 30px;
+            width: 300px;
+            margin: 10px;
+        }
+
+        button {
+            height: 30px;
+            width: 200px;
+            background-color: lightgray;
+            opacity: 0.3;
+            border-radius: 5px;
+            border: 2px solid white;
+            margin: 10px;
+            font-size: medium;
+            color: white 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width: 100rem;margin: 0 auto;">
+        <div class="main">
+            <div class="header">
+                <div><img style="padding-left: 140px ; padding-top: 8px;" src="logo.png" width="10%"></div>
+                <div class="options">
+                    <div class="option selected">Home</div>
+                    <div class="option ">Services</div>
+                    <div class="option">Profile</div>
+                    <div class="option">Contact us</div>
+                </div>
+            </div>
+            <div class="body1">
+                <div class="body1element"><img class="arrow" style="padding-left: 130px;" src="arrow.svg"></div>
+                <div class="body1element">BANNER</div>
+                <div class="body1element"><img class="arrow" style=" padding-right: 130px;transform: scaleX(-1);"
+                        src="arrow.svg"></div>
+            </div>
+            <div class="body2">
+                <div class="floating-div"></div>
+                <div style="background-color: rgb(255, 252, 69); margin: 10px;"></div>
+                <div style=" margin: 10px; display: grid; grid-template-rows: 5fr 2fr;">
+                    <div style="background-color: orange;">
+                        <form style="padding: 20px;">
+                            <input>
+                            <br>
+                            <input>
+                            <br>
+                            <select></select>
+                            <br>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                    <div style="background-color: rgb(72, 217, 72); margin-top: 10px;"></div>
+                </div>
+            </div>
+            <div class="footer">
+                <ul>
+                    <li>Home</li>
+                    <li>|</li>
+                    <li>Services</li>
+                    <li>|</li>
+                    <li>Profile</li>
+                    <li>|</li>
+                    <li>Contact us</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(Document).ready(function () {
+            $('.option').click(function () {
+                $(this).addClass('selected');
+            })
+        })
+    </script>
+</body>
+
+</html>
