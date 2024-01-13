@@ -11,6 +11,7 @@
  .options {
      display: inline-flex;
      list-style-type: none;
+     margin: 0;
  }
 
  .body1 {
@@ -58,9 +59,8 @@
      position: absolute;
      width: 100%;
      height: 100%;
-     background-color: rgba(0, 0, 126, 0.75);
+     background-color: rgba(0, 0, 55, 0.75);
      mix-blend-mode: multiply;
-     color: white;
  }
 
  .header li {
@@ -68,8 +68,7 @@
      font-size: 16px;
      justify-content: space-between;
      font-family: Arial, Helvetica, sans-serif;
-     margin: 5px 15px;
-     padding: 10px;
+     padding: 10px 25px;
      cursor: pointer;
      user-select: none;
      -webkit-user-select: none;
@@ -87,7 +86,7 @@
  .body2 {
      height: 550px;
      display: flex;
-     padding: 40px 160px;
+     padding: 100px 140px;
      justify-content: space-between;
      color: rgb(0, 0, 100);
  }
@@ -97,7 +96,6 @@
      font-size: 18px;
      font-weight: 100;
      display: flex;
-     padding-right: 190px;
      align-items: center;
      margin-right: 10px;
  }
@@ -185,7 +183,7 @@
 
  .body4 {
      height: 1200px;
-     padding: 40px 160px;
+     padding: 100px 140px;
      justify-content: space-between;
      color: rgb(0, 0, 100);
  }
@@ -268,7 +266,7 @@
  }
 
  .body5 {
-     height: 480px;
+     height: 400px;
      background-color: aquamarine;
      background-repeat: no-repeat;
      background-size: cover;
@@ -278,25 +276,23 @@
  }
 
  .body5-elements {
-     height: 400px;
-     padding: 40px 160px;
+     height: 300px;
+     padding: 40px 140px;
      justify-content: space-between;
      display: flex;
-     place-items: center;
  }
 
  .body5-elements .image-container {
-     place-items: center;
      background-color: rgba(193, 193, 193, 0.604);
  }
 
  .body5-elements p {
-     display: grid;
-     place-items: center;
+     display: flex;
+     flex-direction: column;
      font-size: 20px;
+     justify-items: center;
      color: white;
      mix-blend-mode: hard-light;
-     margin-left: 18px;
  }
 
  .body5-elements b {
@@ -319,8 +315,8 @@
  }
 
  .body5-elements .image-container img {
-     width: auto;
-     mix-blend-mode: hard-light;
+     width: 50px;
+     position: absolute;
  }
 
  .body6 {
@@ -331,10 +327,15 @@
  }
 
  .body6-head {
-     font-size: 60px;
+
      height: 200px;
-     color: rgb(0, 0, 95);
+
      text-align: center;
+ }
+
+ .big-text {
+     font-size: 50px;
+     color: rgb(0, 0, 95);
      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
  }
 
@@ -361,6 +362,7 @@
  }
 
  .small-text {
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
      font-size: 15px;
  }
 
@@ -378,4 +380,97 @@
  .card .body1-button-highlighted {
      color: white;
      border: none;
+ }
+
+ .body7 {
+     height: 620px;
+     background-image: url(ex-1/images/img-3.jpg);
+     background-position: center;
+     position: relative;
+ }
+
+ .body7 p {
+     color: white;
+     mix-blend-mode: hard-light;
+     margin: 0;
+ }
+
+ .body7-nav {
+     display: flex;
+
+ }
+
+ .body7-nav .image-container {
+     border-radius: 0;
+     position: relative;
+     margin: 2px;
+     height: 70px;
+     width: 70px;
+     cursor: pointer;
+ }
+
+ .body7-nav .image-container img {
+     height: 20px;
+     filter: brightness(0) invert(1) grayscale(1);
+ }
+
+ .body7-nav .image-container:hover {
+     background-color: rgb(255, 142, 29);
+ }
+
+ .t-card {
+     width: 530px;
+     text-align: center;
+     margin: 10px;
+     height: 100%;
+     padding: 15px;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .t-card img {
+     width: 90px;
+     height: 90px;
+     border-radius: 50%;
+     position: relative;
+     margin: 25px;
+ }
+
+ .name {
+     font-size: 20px;
+     font-weight: 600;
+ }
+
+ .org-name {
+     font-size: 12px;
+ }
+
+ .body8 {
+     height: 680px;
+     padding: 100px 140px;
+ }
+
+ .body8 p {
+     margin: 0;
+     line-height: 20px;
+ }
+
+ .body8 .card {
+    width: 380px;
+     padding: 0;
+     overflow: hidden;
+     margin: 60px 0;
+     text-align: start;
+ }
+
+ .body8 .card-text {
+     font-size: 23px;
+     font-weight: 500;
+     margin-bottom: 20px;
+ }
+
+ .body8 img {
+     width: 100%;
  }
