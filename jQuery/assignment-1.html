@@ -26,9 +26,16 @@
     <button class="button">Click</button>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
+        let flag = 1;
         $(document).ready(function () {
-            $('.button').click(function () {
-                $('.box').hide();
+            $('.button').on('click', function () {
+                if (flag === 1) {
+                    $('.box').hide();
+                    flag = 0;
+                } else {
+                    $('.box').show();
+                    flag = 1;
+                }
             });
         });
 

@@ -27,7 +27,7 @@
         .second-grid {
             display: grid;
             grid-template-columns: 1fr 2fr;
-            grid-column-gap: 10px;
+            grid-column-gap: 5px;
             margin-bottom: 10px;
             margin-top: 10px;
         }
@@ -86,7 +86,7 @@
                     $(this).css('background-color', getRandomColor);
                 });
                 $('#extra_content').click(function () {
-                    $('#main_content').fadeOut(0,function(){
+                    $('#main_content').fadeOut(1000,function(){
                         $('#internal_grid').addClass('expanded')
                     });
                 });
